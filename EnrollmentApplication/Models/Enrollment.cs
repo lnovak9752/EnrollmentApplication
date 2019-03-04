@@ -37,5 +37,8 @@ namespace EnrollmentApplication.Models
         [Display(Name = "Enrollment Year")]
         [Range(typeof(int),"2018","2019",ErrorMessage ="Cannot be before 2018 or after 2019")]
         public virtual int EnrollmentYear { get; set; }
+
+        [InvalidChars("*")]
+        public virtual string Notes { get; set; }
     }
 }
